@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function drop(){
+        var name = document.getElementById('myfun').value;
+        if(name == "x"){
+            var showName = ['iPhone','Samsung','sony'];
+            document.getElementById('display').innerHTML = showName.join('<br>');
+        }
+        else if(name == "y"){
+            var showName = ['Lenova', 'Sony', 'HP'];
+            document.getElementById('display').innerHTML = showName.join('<br>');
+        }
+        else if(name == "z"){
+            var showName = ['Panasonic','LG','Samsung'];
+            document.getElementById('display').innerHTML = showName.join('<br>');
+        }
+
+    }
+    </script>
+    <div>
+        <select id="myfun" name="drop" onchange="drop()">
+                  ---Choose Your Option---
+        <option selected="">---Choose Your Option---</option>
+        <option value="x">Laptop</option>
+        <option value="y">Mobile</option>
+        <option value="z">TV</option>
+    
+    
+        </select>
+    </div>
+    <div>
+        <span id="display"></span>
+    </div>
+    
+</body>
+
+</html>

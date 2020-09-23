@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="return validate()">
+    <label>Enter Username</label>
+    <input type="text" name="user" id="user">
+    <span id="username"></span><br><br>
+
+    <label>Enter Password</label>
+    <input type="text" name="password" id="password">
+    <span id="Password"></span><br><br>
+
+    <label>Enter Email</label>
+    <input type="text" name="email" id="email">
+    <span id="emailId"></span><br><br>
+
+    <label>Enter Number</label>
+    <input type="text" name="number" id="number">
+    <span id="Number"></span><br><br>
+
+    <label>Enter City</label>
+    <input type="text" name="city" id="city">
+    <span id="City"></span><br><br>
+
+    <input type="submit" value="submit" name="submit">
+
+    </form>
+    <script type="text/javascript">
+    function validate(){
+        var user = document.getElementById('user').value;
+        var password = document.getElementById('password').value;
+        var email = document.getElementById('email').value;
+        var number = document.getElementById('number').value;
+        var numbers = /[0-9]/g;
+        var lower = /[a-z]/g;
+        var upper = /[A-Z]/g;
+        var special = /[!@#$%^&*]/g;
+
+        if(user == "" ){
+            document.getElementById('username').innerHTML = " ** Username caanot be blank";
+            return false;
+        }
+        if(user.length < 5 || user.length > 25 ){
+            document.getElementById('username').innerHTML = " ** Username cannot be less than 5 or more than 25";
+            return false;
+        }
+       
+        if(password == "" ){
+            document.getElementById('Password').innerHTML = " ** Password cannot be blank";
+            return false;
+        }
+        if(!password.match(numbers)){
+            document.getElementById('Password').innerHTML = " ** Add one number";
+            return false;
+        }
+        if(!password.match(lower)){
+            document.getElementById('Password').innerHTML = " ** Add one lowercase letter";
+            return false;
+        }
+        if(!password.match(upper)){
+            document.getElementById('Password').innerHTML = " ** Add one uppercase letter";
+            return false;
+        }
+        if(!password.match(special)){
+            document.getElementById('Password').innerHTML = " ** Add one special character";
+            return false;
+        }
+        if(email == "" ){
+            document.getElementById('emailId').innerHTML = " ** Enter Email";
+            return false;
+        }
+        if(email.indexOf('@') <= 0){
+            document.getElementById('emailId').innerHTML = " ** Invalid @ position";
+            return false;
+        }
+        // if((email.charAt(email.length - 4) != '.' )||(email.charAt(email.length - 3) != '.')){
+        //     document.getElementById('emailId').innerHTML = " ** Invalid . position";
+        //     return false;
+        // }
+        if(number == "" ){
+            document.getElementById('Number').innerHTML = " ** Enter Number";
+            return false;
+        }
+        if(isNaN(number)){
+            document.getElementById('Number').innerHTML = " ** Character not allowed";
+            return false;
+        }
+        if(number.length != 10){
+            document.getElementById('Number').innerHTML = " ** Enter only 10 digits number";
+            return false;
+        }
+    }
+    </script>
+  
+</body>
+</html>
