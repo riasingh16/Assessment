@@ -1,0 +1,21 @@
+[{
+    "name": "JW Marriot",
+    "city" : "Bangalore",
+    "type": "Veg",
+    "cuisine": ["Indian", "Continental"]
+},{
+    "name": "Radisson Blu",
+    "city" : "Mysore",
+    "type": "Non Veg",
+    "cuisine": ["Indian", "Italian"]
+},{
+    "name": "Swosti grand",
+    "city" : "Cochin",
+    "type": "Non Veg",
+    "cuisine": ["Indian", "Italian"]
+},{
+    "name": "Pal Heights",
+    "city" : "Bangalore",
+    "type": "Veg",
+    "cuisine": ["Chinese ", "Italian"]
+}]
